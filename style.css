@@ -1,0 +1,69 @@
+/* Fondo animado y degradado */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #6D5BBA 25%, #8BC6EC 75%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+button {
+  margin: 10px;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  background-color: #FF6B6B;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 200px;
+  text-align: center;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+button:disabled {
+  background-color: #AAAAAA;
+  cursor: not-allowed;
+}
+
+.message {
+  color: #d30505;
+  font-weight: bold;
+  margin-top: 20px;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  h1 {
+      font-size: 2.5em;
+  }
+
+  button {
+      font-size: 1em;
+      padding: 12px 25px;
+  }
+}
